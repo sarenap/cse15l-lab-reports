@@ -1,7 +1,7 @@
 LAB REPORT 1
 Teach 15L students  how to log into a course-specific account on ieng6. 
 
-##Install VSCode
+## Install VSCode
 
  Install VS code for your device ![alt text](https://user-images.githubusercontent.com/122493371/211989434-ea5fb506-bbe3-48de-bb53-b61602863fea.PNG) 
 
@@ -66,19 +66,16 @@ cat /home/linux/ieng6/cs15lwi23/public/hello.txt`
   no such file or directory if the path doesn't exist
   Permission denied if trying to access someone else's files
 
-##Logout of Bash terminal
+## Logout of Bash terminal
   
  use:
 
-Ctrl-D
-Run the command exit
+'Ctrl-D
+Run the command exit'
   
   now you know how to connect to a remote server by logging in with Bash terminal, run commands on vscode terminal, and logout of remote server
+  
   ![alt text](https://user-images.githubusercontent.com/122493371/211988591-d262593b-128a-47f4-88ab-748a37c3b02d.PNG)
   ![alt text](https://user-images.githubusercontent.com/122493371/211988767-4f329561-791c-4e26-b8a3-aca956391a1e.PNG))
   ![alt text]([image.jpg](https://user-images.githubusercontent.com/122493371/211989620-e796739d-6973-41ae-9fcf-3d6f5cbf4ad3.PNG))
   
-  
-<img width="420" alt="Capture" src="https://user-images.githubusercontent.com/122493371/211988591-d262593b-128a-47f4-88ab-748a37c3b02d.PNG">
-<img width="395" alt="Capture2" src="https://user-images.githubusercontent.com/122493371/211988767-4f329561-791c-4e26-b8a3-aca956391a1e.PNG">
-<img width="422" alt="Capture3" src="https://user-images.githubusercontent.com/122493371/211989620-e796739d-6973-41ae-9fcf-3d6f5cbf4ad3.PNG">
