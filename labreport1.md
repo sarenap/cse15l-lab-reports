@@ -77,5 +77,5 @@ Run the command exit`
   
   ![alt text](https://user-images.githubusercontent.com/122493371/211988591-d262593b-128a-47f4-88ab-748a37c3b02d.PNG)
   ![alt text](https://user-images.githubusercontent.com/122493371/211988767-4f329561-791c-4e26-b8a3-aca956391a1e.PNG))
-  ![alt text]([image.jpg](https://user-images.githubusercontent.com/122493371/211989620-e796739d-6973-41ae-9fcf-3d6f5cbf4ad3.PNG))
+  ![alt text]([image.jpg](https://user-images.githubusercontent.com/122493371/211989620-e796739d-6973-41ae-9fcf-3d6f5cbf4ad3.PNG)
   
