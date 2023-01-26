@@ -46,7 +46,7 @@ ieng6-203   23:25:01   1  0.08,  0.15,  0.11
 Sun Jan 02, 2022 11:28pm - Prepping cs15lwi23
 ![alt text](https://user-images.githubusercontent.com/122493371/211988591-d262593b-128a-47f4-88ab-748a37c3b02d.PNG)
 
-##Run some commands in vscode terminal
+## Run some commands in vscode terminal
 
 Try running the commands cd, ls, pwd, mkdir, and cp a few times in different ways, both on your computer, and on the remote computer after ssh-ing 
 ![alt text](https://user-images.githubusercontent.com/122493371/211988767-4f329561-791c-4e26-b8a3-aca956391a1e.PNG)
