@@ -60,6 +60,8 @@ Try running the commands cd, ls, pwd, mkdir, and cp a few times in different way
 4. `ls <directory> where <directory> is /home/linux/ieng6/cs15lwi23/cs15lwi23abc`, where the abc is one of the other group members’ username. Lists all sub directories in the working directory.
 5. `cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/` cp: copy files or group of files or directory
 6. `cat /home/linux/ieng6/cs15lwi23/public/hello.txt`  cat: reads data from the file and gives their content as output
+7. `pwd` print working directory
+8. `mkdir` makes a directory inside the working directory
   
   common errors we might occur
   no such file or directory if the path doesn't exist
