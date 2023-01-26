@@ -54,13 +54,13 @@ Try running the commands cd, ls, pwd, mkdir, and cp a few times in different way
 
  specific useful commands to try:
 
-`cd ~
-cd
-ls -lat
-ls -a
-ls <directory> where <directory> is /home/linux/ieng6/cs15lwi23/cs15lwi23abc, where the abc is one of the other group members’ username
-cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/
-cat /home/linux/ieng6/cs15lwi23/public/hello.txt`
+1.` cd ~ `
+2.` cd `
+3. `ls -lat`
+4. `ls -a`
+5. `ls <directory> where <directory> is /home/linux/ieng6/cs15lwi23/cs15lwi23abc`, where the abc is one of the other group members’ username
+6. `cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/`
+7. `cat /home/linux/ieng6/cs15lwi23/public/hello.txt`
   
   common errors we might occur
   no such file or directory if the path doesn't exist
@@ -70,8 +70,8 @@ cat /home/linux/ieng6/cs15lwi23/public/hello.txt`
   
  use:
 
-'Ctrl-D
-Run the command exit'
+`Ctrl-D
+Run the command exit`
   
   now you know how to connect to a remote server by logging in with Bash terminal, run commands on vscode terminal, and logout of remote server
   
