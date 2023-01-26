@@ -54,10 +54,10 @@ Try running the commands cd, ls, pwd, mkdir, and cp a few times in different way
 
  specific useful commands to try:
 
-1.` cd ~ ` cd:  change current working directory
-2. `ls -lat` ls:  list files or directories and sort by size in descending order (biggest to smallest)
-3. `ls -a`
-4. `ls <directory> where <directory> is /home/linux/ieng6/cs15lwi23/cs15lwi23abc`, where the abc is one of the other group members’ username
+1. `cd ~ ` cd:  change current working directory
+2. `ls -lat` ls:  list files or directories. l: long format. a: lists hidden files and sort by size in descending order (biggest to smallest). t: (time) sorts in chronological order.
+3. `ls -a`  a lists hidden files
+4. `ls <directory> where <directory> is /home/linux/ieng6/cs15lwi23/cs15lwi23abc`, where the abc is one of the other group members’ username. Lists all sub directories in the working directory.
 5. `cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/` cp: copy files or group of files or directory
 6. `cat /home/linux/ieng6/cs15lwi23/public/hello.txt`  cat: reads data from the file and gives their content as output
   
