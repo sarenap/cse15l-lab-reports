@@ -1,4 +1,4 @@
-**## Lab Report 2: Servers & Bugs**
+**##Lab Report 2: Servers & Bugs**
 
 Write a web server called StringServer that supports the path and behavior described below. 
 It should keep track of a single string that gets added to by incoming requests.
@@ -40,7 +40,7 @@ Request to type: /add-message?s=<string>
 13. *Server.start(port, new Handler())* takes in 2 arguments, int port and Handler() method call from the URLHandler interface  
   
   
-## Code For String Server
+##Code For String Server
 
 `import java.io.IOException;
 import java.net.URI;
@@ -77,8 +77,7 @@ class StringServer {
         int port = Integer.parseInt(args[0]);
         Server.start(port, new Handler());
     }
-}
-`
+}`
 
 #Part 2
  
