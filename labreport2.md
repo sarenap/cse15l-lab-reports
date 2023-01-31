@@ -42,12 +42,12 @@ Request to type: /add-message?s=<string>
   
 ## Code For String Server
 
-` import java.io.IOException;
+`import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
-class Handler implements URLHandler {
+class Handler implements URLHandler {`
 
-//keep track of a single string that gets added to by incoming requests.
+`//keep track of a single string that gets added to by incoming requests.
 String str = ""; 
 public String handleRequest(URI url) {
     if (url.getPath().equals("/")) {
@@ -65,9 +65,9 @@ public String handleRequest(URI url) {
        }
         return "404 Not Found!";
     }
-}
+}`
 
-class StringServer {
+`class StringServer {
     public static void main(String[] args) throws IOException {
         if(args.length == 0){
             System.out.println("Missing port number! Try any number between 1024 to 49151");
@@ -77,7 +77,7 @@ class StringServer {
         int port = Integer.parseInt(args[0]);
         Server.start(port, new Handler());
     }
-} `
+}`
 
 # Part 2
  
@@ -111,6 +111,7 @@ Provide:
   
   # An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
   list only has letter a so we can't tell if the letters were added wrong or right
+  
   `@Test
      public void testFilter2(){
         //test if same order
@@ -130,6 +131,7 @@ Provide:
      }` 
   
 # The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
+  
 -Briefly describe why the fix addresses the issue.
 -*Before code*
  -` static List<String> filter(List<String> list, StringChecker sc) {
