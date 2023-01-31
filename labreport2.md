@@ -1,4 +1,4 @@
-**# Lab Report 2: Servers & Bugs**
+# Lab Report 2: Servers & Bugs
 
 Write a web server called StringServer that supports the path and behavior described below. 
 It should keep track of a single string that gets added to by incoming requests.
@@ -130,9 +130,9 @@ Provide:
      }` 
   
 # The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
-Briefly describe why the fix addresses the issue.
-*Before code*
-  ` static List<String> filter(List<String> list, StringChecker sc) {
+-Briefly describe why the fix addresses the issue.
+-*Before code*
+ -` static List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
     for(String s: list) {
       if(sc.checkString(s)) {
@@ -142,8 +142,8 @@ Briefly describe why the fix addresses the issue.
     return result;
   }`
   
-*Fixed the bug*
-`static List<String> filter(List<String> list, StringChecker sc) {
+-*Fixed the bug*
+-`static List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
     for(String s: list) {
       if(sc.checkString(s)) {
