@@ -1,4 +1,4 @@
-**## Lab Report 2: Servers & Bugs**
+**# Lab Report 2: Servers & Bugs**
 
 Write a web server called StringServer that supports the path and behavior described below. 
 It should keep track of a single string that gets added to by incoming requests.
@@ -84,10 +84,78 @@ class StringServer {
 *Choose one of the bugs from lab 3.*: 
 
 Provide:
-
-A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
-An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
-The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
-The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
-Briefly describe why the fix addresses the issue.
  
+**The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)**
+![image](https://user-images.githubusercontent.com/122493371/215666422-21916a2e-d172-4573-8d73-cd4b0dc02615.png)
+  **list was reversed instead of staying in original order**
+
+  # A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
+  `@Test
+     public void testFilter(){
+        //test if same order
+        ArrayList<String> s = new ArrayList<String>();
+        s.add("a");
+        s.add("b");
+        s.add("c");
+        s.add("d");
+        s.add("e");
+
+        List<String> t = ListExamples.filter(s, new StringChecker() {
+            public boolean checkString(String s) {
+                return true; 
+            }
+        }); 
+        assertEquals(s,t);
+     }`
+  
+  
+  # An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
+  list only has letter a so we can't tell if the letters were added wrong or right
+  `@Test
+     public void testFilter2(){
+        //test if same order
+        ArrayList<String> s = new ArrayList<String>();
+        s.add("a");
+        s.add("a");
+        s.add("a");
+        s.add("a");
+        s.add("a");
+
+        List<String> t = ListExamples.filter(s, new StringChecker() {
+            public boolean checkString(String s) {
+                return true; 
+            }
+        }); 
+        assertEquals(s,t);
+     }` 
+  
+# The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
+Briefly describe why the fix addresses the issue.
+*Before code*
+  ` static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0,s); //BUG that adds to beginning of list instead of end. this reverses the list
+      }
+    }
+    return result;
+  }`
+  
+*Fixed the bug*
+`static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(s); //add to end of list to keep same order
+      }
+    }
+    return result;
+  }`
+
+# Part 3
+
+In a couple of sentences, describe something you learned from lab in week 2 or 3 that you didn’t know before.
+  In lab 2,  I have a better idea of how servers store information, like incrementing or decrementing a number, or adding to a string. That can be applied to other concepts like online gaming servers that multiple computers can access and change data. 
+In lab 3, I learned that writing tests is an important skill to debug code since it can be hard to see the mistake without testing different inputs.
+  I learned how to debug more efficiently. 
