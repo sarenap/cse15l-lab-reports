@@ -8,46 +8,47 @@ Request to type: /add-message?s=<string>
   
 ![image](https://user-images.githubusercontent.com/122493371/215353277-56937293-4e8a-4bc8-9a58-27a310e798c7.png)
 1. **Which methods in your code are called?:** 3 methods,
-2. public String handleRequest(URI url), 
-3. public static void main(String[] args) throws IOException,  
-4. Server.start(port, new Handler()) were called.
-5. **What are the relevant arguments to those methods, and the values of any relevant fields of the class?**
-6. **How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.**
-7. *public String handleRequest(URI url)* argument is URI url (the request being entered by user). *URI url was /add-message?s=Hello*
-8. fields: we made a string str reference that we keep adding to as requests are entered. each added string will be printed on a new line. *Hello* was added to str.
-9. *public static void main(String[] args) throws IOException* argument is String[] args.
-10. fields: args.length==0 if user did not enter anything. If so, user is prompted to enter port number. *my port number was 4101, started as a string and got parsed to an int*. this doesnt change as long as we are stay on the server.
-11. String[] args is the string port number that user enters. throws an exception if they didn't enter a number string (parse int won't work later)
-12. int port = Integer.parseInt(args[0]) parses the port number (entered as string argument), into an int
-13. *Server.start(port, new Handler())* takes in 2 arguments, int port and Handler() method call from the URLHandler interface  
+- public String handleRequest(URI url), 
+- public static void main(String[] args) throws IOException,  
+- Server.start(port, new Handler()) were called.
+2. **What are the relevant arguments to those methods, and the values of any relevant fields of the class?**
+3. **How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.**
+- *public String handleRequest(URI url)* argument is URI url (the request being entered by user). *URI url was /add-message?s=Hello*
+- fields: we made a string str reference that we keep adding to as requests are entered. each added string will be printed on a new line. *Hello* was added to str.
+- *public static void main(String[] args) throws IOException* argument is String[] args.
+- fields: args.length==0 if user did not enter anything. If so, user is prompted to enter port number. *my port number was 4101, started as a string and got parsed to an int*. this doesnt change as long as we are stay on the server.
+- String[] args is the string port number that user enters. throws an exception if they didn't enter a number string (parse int won't work later)
+- int port = Integer.parseInt(args[0]) parses the port number (entered as string argument), into an int
+- *Server.start(port, new Handler())* takes in 2 arguments, int port and Handler() method call from the URLHandler interface  
  
 
 
 ![image](https://user-images.githubusercontent.com/122493371/215353330-719bb1e4-70e2-43b0-aafa-2c1e3608a3af.png)
 
 1. **Which methods in your code are called?:** 3 methods,
-2. public String handleRequest(URI url), 
-3. public static void main(String[] args) throws IOException,  
-4  Server.start(port, new Handler()) were called.
-5. **What are the relevant arguments to those methods, and the values of any relevant fields of the class?**
-6. **How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.**
-7. *public String handleRequest(URI url)* argument is URI url (the request being entered by user). *URI url was /add-message?s=How are you*
-8. fields: we made a string str reference that we keep adding to as requests are entered. each added string will be printed on a new line. *How are you* was added to str.
-9. *public static void main(String[] args) throws IOException* argument is String[] args.
-10. fields: args.length==0 if user did not enter anything. If so, user is prompted to enter port number. *my port number was 4101, started as a string and got parsed to an int*. this doesnt change as long as we are stay on the server.
-11. String[] args is the string port number that user enters. throws an exception if they didn't enter a number string (parse int won't work later)
-12. int port = Integer.parseInt(args[0]) parses the port number (entered as string argument), into an int
-13. *Server.start(port, new Handler())* takes in 2 arguments, int port and Handler() method call from the URLHandler interface  
+- public String handleRequest(URI url), 
+- public static void main(String[] args) throws IOException,  
+-  Server.start(port, new Handler()) were called.
+2. **What are the relevant arguments to those methods, and the values of any relevant fields of the class?**
+3. **How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.**
+- *public String handleRequest(URI url)* argument is URI url (the request being entered by user). *URI url was /add-message?s=How are you*
+- fields: we made a string str reference that we keep adding to as requests are entered. each added string will be printed on a new line. *How are you* was added to str.
+- *public static void main(String[] args) throws IOException* argument is String[] args.
+- fields: args.length==0 if user did not enter anything. If so, user is prompted to enter port number. *my port number was 4101, started as a string and got parsed to an int*. this doesnt change as long as we are stay on the server.
+- String[] args is the string port number that user enters. throws an exception if they didn't enter a number string (parse int won't work later)
+- int port = Integer.parseInt(args[0]) parses the port number (entered as string argument), into an int
+- *Server.start(port, new Handler())* takes in 2 arguments, int port and Handler() method call from the URLHandler interface  
   
   
 ## Code For String Server
-
-`import java.io.IOException;
+  
+```
+import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
-class Handler implements URLHandler {`
+class Handler implements URLHandler {
 
-`//keep track of a single string that gets added to by incoming requests.
+//keep track of a single string that gets added to by incoming requests.
 String str = ""; 
 public String handleRequest(URI url) {
     if (url.getPath().equals("/")) {
@@ -65,9 +66,11 @@ public String handleRequest(URI url) {
        }
         return "404 Not Found!";
     }
-}`
+}
+```
 
-`class StringServer {
+```
+  class StringServer {
     public static void main(String[] args) throws IOException {
         if(args.length == 0){
             System.out.println("Missing port number! Try any number between 1024 to 49151");
@@ -77,7 +80,8 @@ public String handleRequest(URI url) {
         int port = Integer.parseInt(args[0]);
         Server.start(port, new Handler());
     }
-}`
+}
+```
 
 # Part 2
  
@@ -90,7 +94,8 @@ Provide:
   **list was reversed instead of staying in original order**
 
   # A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
-  `@Test
+  ```
+  @Test
      public void testFilter(){
         //test if same order
         ArrayList<String> s = new ArrayList<String>();
@@ -106,13 +111,15 @@ Provide:
             }
         }); 
         assertEquals(s,t);
-     }`
+     }
+  ```
   
   
   # An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
   list only has letter a so we can't tell if the letters were added wrong or right
   
-  `@Test
+  ```
+  @Test
      public void testFilter2(){
         //test if same order
         ArrayList<String> s = new ArrayList<String>();
@@ -128,7 +135,8 @@ Provide:
             }
         }); 
         assertEquals(s,t);
-     }` 
+     }
+  ```
   
 # The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
   
@@ -142,10 +150,12 @@ Provide:
       }
     }
     return result;
-  }`
+  }
+  ```
   
 -*Fixed the bug*
--`static List<String> filter(List<String> list, StringChecker sc) {
+```
+  static List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
     for(String s: list) {
       if(sc.checkString(s)) {
@@ -153,7 +163,8 @@ Provide:
       }
     }
     return result;
-  }`
+  }
+  ```
 
 # Part 3
 
