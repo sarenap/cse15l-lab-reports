@@ -93,7 +93,8 @@ Provide:
 ![image](https://user-images.githubusercontent.com/122493371/215666422-21916a2e-d172-4573-8d73-cd4b0dc02615.png)
   **list was reversed instead of staying in original order**
 
-  # A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
+# A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
+  
   ```
   @Test
      public void testFilter(){
@@ -115,7 +116,7 @@ Provide:
   ```
   
   
-  # An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
+# NON FAILURE INPUT HERE, as a JUnit test and any associated code (write it as a code block in Markdown)
   list only has letter a so we can't tell if the letters were added wrong or right
   
   ```
