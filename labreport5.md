@@ -3,7 +3,8 @@
 
 -For this lab I had to make many improvements to the grading script to make it run properly, spent extra time doing research on the commands and syntax of bash.
 -Here is the grade.sh script
-`CPATH='.;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar'
+```
+CPATH='.;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar'
 
 rm -rf student-submission
 git clone $1 student-submission
@@ -41,7 +42,8 @@ fi
 FAILURES=$(grep -oP "Failures:\s+\K\w+" <<< $TESTRESULTS)
 TESTS=$(grep -oP "Tests run:\s+\K\w+" <<< $TESTRESULTS)
 echo "Score: " $FAILURES/$TESTS
-echo $TESTRESULTS`
+echo $TESTRESULTS
+```
 
 ## Here is what the gradescope script does, each line explained
 
